@@ -28,7 +28,7 @@ const Hero = () => {
                     words='Transforming Concepts into Seamless User Experiences'
                 />
 
-                <p className='text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl'>
+                <p className='text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl text-white'>
                     Hi, I&apos;m Guilherme, a Next.js Developer based in Brazil
                 </p>
 

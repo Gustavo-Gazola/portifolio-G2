@@ -10,6 +10,8 @@ import { useState } from "react";
 import animationData from "@/data/confetti.json";
 import { IoCopyOutline } from "react-icons/io5";
 import MagicButton from "@/components/ui/MagicButton";
+import { useLottie } from "lottie-react";
+
 
 export const BentoGrid = ({
   className,
@@ -21,7 +23,7 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        "grid md:auto-rows-[18rem] grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto ",
+        "grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 md:grid-row-7 gap-4 lg:gap-8 mx-auto",
         className
       )}
     >
@@ -58,6 +60,9 @@ export const BentoGridItem = ({
     navigator.clipboard.writeText('test@gmail.com');
 
     setCopied(true);
+    setTimeout(() => {
+      setCopied(false);
+    }, 2000);
   }
 
   return (
@@ -72,7 +77,7 @@ export const BentoGridItem = ({
           "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
       }}
     >
-      <div className={`${id === 6} && 'flex justify-center h-full'`}>
+      <div className={`${id === 6 && 'flex justify-center'} h-full'`}>
         <div className="w-full h-full absolute">
           {img && (
             <img 
@@ -93,7 +98,7 @@ export const BentoGridItem = ({
         </div>
         {id === 6 && (
           <BackgroundGradientAnimation>
-            <div className="absolute z-50 flex items-center justify-center text-white font-bold"/>
+            {/* <div className="absolute z-50 flex items-center justify-center text-white font-bold"/> */}
           </BackgroundGradientAnimation>
         )}
 
@@ -113,7 +118,7 @@ export const BentoGridItem = ({
           <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
             <div className="flex flex-col gap-3 lg:gap-8">
               {['React.js', 'Next.js', 'TypeScript'].map((item) => (
-                <span key={item} className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]">
+                <span key={item} className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E] text-slate-100">
                   {item}
                 </span>
               ))}
@@ -122,7 +127,7 @@ export const BentoGridItem = ({
             <div className="flex flex-col gap-3 lg:gap-8">
             <span className="py-4 px-3 rounded-lg text-center bg-[#10132e]" />
               {['VueJS', 'AWS', 'MongoDB'].map((item) => (
-                <span key={item} className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]">
+                <span key={item} className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E] text-slate-100">
                   {item}
                 </span>
               ))}
@@ -132,15 +137,12 @@ export const BentoGridItem = ({
 
         {id === 6 && (
           <div className="mt-5 relative">
-            <div className="`absolute -bottom-5 right-0`">
-              <Lottie options={{
+            <div className="absolute -bottom-5 right-0">
+              {useLottie({
+                animationData,
                 loop: copied,
                 autoplay: copied,
-                animationData,
-                rendererSettings: {
-                  preserveAspectRatio: 'xMidYMid slice'
-                }
-              }} />
+              }).View}
             </div>
 
             <MagicButton 
