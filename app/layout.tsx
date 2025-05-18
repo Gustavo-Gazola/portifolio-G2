@@ -15,7 +15,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Gui's Portifolio",
+  title: "G2 SoftWork's Portifolio",
   description: "Portifolio Moderno e Minimalista JS",
 };
 

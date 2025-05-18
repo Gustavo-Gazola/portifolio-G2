@@ -9,13 +9,13 @@ const Approach = () => {
   return (
     <section className="w-full py-20">
         <h1 className="heading text-white">
-            My <span className="text-purple">approach</span>
+            Our <span className="text-purple">approach</span>
         </h1>
       <div className="my-20 flex flex-col lg:flex-row items-center justify-center gap-4">
         <Card 
             title="Planning & Strategy" 
             icon={<AceternityIcon order="Phase 1"/>}
-            description="TESTE1">
+            description="Project Foundation">
             <CanvasRevealEffect
                 animationSpeed={5.1}
                 containerClassName="bg-emerald-900"
@@ -24,7 +24,7 @@ const Approach = () => {
         <Card 
             title="Development & Progress Update" 
             icon={<AceternityIcon order="Phase 2"/>}
-            description="TESTE2">
+            description="Server Configuration & Deployment">
             <CanvasRevealEffect
                 animationSpeed={3}
                 containerClassName="bg-black"
@@ -38,7 +38,7 @@ const Approach = () => {
         <Card 
             title="Development & Launch" 
             icon={<AceternityIcon order="Phase 3"/>}
-            description="TESTE3">
+            description="Frontend Integration & Testing">
             <CanvasRevealEffect
                 animationSpeed={3}
                 containerClassName="bg-sky-600"

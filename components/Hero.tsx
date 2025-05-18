@@ -26,16 +26,16 @@ const Hero = () => {
 
                 <TextGenerateEffect
                     className='text-center text-[40px] md:text-5xl lg:text-6xl'
-                    words='Transforming Concepts into Seamless User Experiences'
+                    words='G2 SoftWorks'
                 />
-
+                
                 <p className='text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl text-white'>
-                    Hi, I&apos;m Guilherme, a Next.js Developer based in Brazil
+                Demo project with fictional data — Linux server and Next.js frontend, built by Brazilian developers.
                 </p>
 
                 <a href='#about'>
                     <MagicButton
-                        title="Show My Work"
+                        title="Show Our Work"
                         icon={<FaLocationArrow/>}
                         position='right'
                     />
